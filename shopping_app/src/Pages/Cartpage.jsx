@@ -35,9 +35,9 @@ console.log(quantities.id)
         {uniqueArr.map((el)=>(
          <div>
           <img src={el.image} alt="" />
-          <p>{el.price*quantities[el.id]}</p>
-          <button onClick={()=>handleDecrement(el.id,el.price)} disabled={quantities[el.id]===1}>-</button>
-          <button>{quantities[el.id] || 0}</button>
+          <p>{quantities[el.id] >0?el.price*quantities[el.id]:0}</p>
+          <button onClick={()=>handleDecrement(el.id,el.price)} disabled={quantities[el.id]===0}>-</button>
+          <button>{quantities[el.id] || 0 }</button>
           <button onClick={()=>handleIncrement(el.id,el.price)}>+</button>
           </div>
         ))}

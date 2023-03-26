@@ -8,7 +8,7 @@ function Productcard({image,price,category,title,handlequicklook,handleaddcart})
         <p>{category}</p>
         <p>Rs.{price}</p>
         <button onClick={handlequicklook}>Quick Look</button>
-        <button>Add to cart</button>
+       
        
     </div>
   )
